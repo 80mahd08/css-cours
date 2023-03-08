@@ -1,0 +1,43 @@
+/*
+  Grid
+  Parent
+  - display: grid | inline-grid
+  - grid-template-columns: [Number Of Columns In] => [Px , % , Auto , fraction , Repeat(), Mix]
+  - grid-template-rows: [Number of rows height] => [Px , % , Auto , fraction , Repeat(), Mix]
+  - row-gap: 10px
+  - column-gap:  10px
+  - gap: [row gap] [column gap]
+  - justify-content
+  - align-content
+  - grid-auto-flow: row => default
+                  : column 
+                  : dense
+  - grid-auto-column : size of the rest of the grid element after (grid-template-column)
+*/
+
+* {
+    box-sizing: border-box;
+  }
+  .parent {
+    margin: 20px auto;
+    max-width: 800px;
+    height: 500px;
+    background-color: #ddd;
+    display: grid;
+    grid-template-columns:repeat(4 , auto);
+    grid-template-rows: auto auto;
+    /* row-gap: 10px;
+    column-gap: 10px; */
+    gap: 10px 10px;
+    justify-content: space-between;
+    align-content: space-between;
+
+  }
+  .parent div {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }

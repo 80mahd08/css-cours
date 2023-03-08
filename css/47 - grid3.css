@@ -1,0 +1,52 @@
+/*
+  Grid
+  Parent
+  - display: grid | inline-grid
+  - grid-template-columns: [Number Of Columns In] => [Px , % , Auto , fraction , Repeat(), Mix]
+  - grid-template-rows: [Number of rows height] => [Px , % , Auto , fraction , Repeat(), Mix]
+  - row-gap: 10px
+  - column-gap:  10px
+  - gap: [row gap] [column gap]
+  - justify-content
+  - align-content
+  - grid-template-areas
+  child
+  - grid-column: [grid column start] [grid column end]
+  - grid-row: [grid row start] [grid row end] 
+*/
+
+* {
+    box-sizing: border-box;
+  }
+  .parent {
+    margin: 20px auto;
+    max-width: 800px;
+    height: 500px;
+    background-color: #eee;
+    display: grid;
+    grid-template-columns:repeat(6 , 1fr);
+    gap: 10px 10px;
+  }
+  .parent div {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .parent div:first-child {
+    grid-column: span 6;/*=> grid-column: 1 / 7;*/ 
+}
+    .parent div:nth-child(18){
+        grid-column: 6;
+    }
+    .parent div:nth-child(17){
+        grid-column: 1 / span 5;
+    }
+    .parent div:nth-child(2){
+        grid-row: 2 / 4;
+    }
+    .parent div:nth-child(16){
+        grid-column: 4 / span 3;
+    }

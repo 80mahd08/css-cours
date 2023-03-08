@@ -1,0 +1,95 @@
+/*
+  Flexible Box
+  - for parent
+  -- display : flex => to start flexible box 
+  -- flex-direction : row => Default Value
+                    : row-revers
+                    : column
+                    : column-revers
+  -- flex-wrap : nowrap => Default Value
+               : wrap
+               : wrap-reverse
+  -- flex-flow : [flex-direction] [flex-wrap]
+  -- justify-content : flex-start => default value
+                     : flex-end
+                     : center
+                     : space-between
+                     : space-around
+                     : space-evenly
+  -- align-item : stretch => default Value
+                : flex-start
+                : flex-end
+                : center
+  -- align-content : stretch => default Value
+                   : flex-start
+                   : flex-end
+                   : center
+                   : space-between
+                   : space-around
+                   : space-evenly
+  - for child
+  -- flex-grow : 0 => default value
+  -- flex-shrink: 1 => default value
+*/
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  /* body{
+    direction: rtl; => flex treat it as a text Contrary to float we have o edit float direction
+  } */
+  .flex {
+    background-color: #eee;
+    max-width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    /* flex-wrap: wrap-reverse; */
+    flex-flow: row wrap;
+    gap: 10px;
+  }
+  .flex div {
+    background-color: #f00;
+    color: white;
+    width: calc(100% / 5 - 10px);
+    text-align: center;
+    padding: 20px;
+  }
+  .float {
+    overflow: hidden;
+    background-color: #eee;
+    max-width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    /* gap: 10px; => do not work */ 
+  }
+  .float div {
+    background-color: #f00;
+    color: white;
+    float: left;
+    width: calc(98% / 5);
+    text-align: center;
+    padding: 20px;
+  }
+
+@media (max-width: 767px ){
+    .float div{
+        width: calc(98% / 1);
+    }
+    .flex div{
+        width: calc(98% / 1);
+    }
+}
+@media (min-width: 768px ) and (max-width: 991px ){
+    .float div{
+        width: calc(98% / 2);
+    }
+    .flex div{
+        width: calc(98% / 2);
+    }
+}
+

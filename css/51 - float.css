@@ -1,0 +1,37 @@
+/*
+    Float
+    Clear
+*/
+
+.parent{
+    background-color: red;
+    padding: 10px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.parent div:not(:last-child){
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #eee;
+    float: left;
+    width: calc(100% / 4 - 20px);
+    margin: 10px;
+}
+
+.clear{
+    clear: both;
+}
+
+@media (max-width: 767px ){
+    .parent div:not(:last-child){
+        width: calc(100% / 1 - 20px);
+    }
+}
+@media (min-width: 768px ) and (max-width: 991px ){
+    .parent div:not(:last-child){
+        width: calc(100% / 2 - 20px);
+    }
+}

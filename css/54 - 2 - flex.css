@@ -1,0 +1,27 @@
+/*
+  Flexible Box
+*/
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .flex {
+    background-color: #eee;
+    width: 600px;
+    height: 400px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+
+  }
+  .flex div {
+    background-color: #f00;
+    color: white;
+    width: calc(100% / 3);
+    text-align: center;
+    padding: 20px;
+  }

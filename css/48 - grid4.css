@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    margin: 20px auto;
+    max-width: 800px;
+    height: 500px;
+    background-color: #ddd;
+    display: grid;
+    gap: 10px 10px;
+    grid-template-areas: "head head nav nav nav " "cont cont cont cont cont ";
+}
+.container div{
+    background-color: red;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+.container div:nth-child(1){
+    grid-area: head;
+}
+.container div:nth-child(2){
+    grid-area: nav;
+}
+.container div:nth-child(3){
+    grid-area: cont;
+}

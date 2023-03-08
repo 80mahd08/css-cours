@@ -1,0 +1,54 @@
+/*
+  Flexible Box
+  For Parent
+*/
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .flex {
+    background-color: #eee;
+    width: 600px; 
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    align-items: flex-end;
+    height: 100px;
+  }
+  .flex div {
+    background-color: #f00;
+    color: white;
+    width: calc(100% / 3);
+    text-align: center;
+    padding: 20px;
+  }
+  /* .flex .one,
+  .float .one {
+    height: 80px;
+  } */
+  .float {
+    overflow: hidden;
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+  }
+  .float div {
+    background-color: #f00;
+    color: white;
+    float: right;
+    width: calc(100% / 3);
+    text-align: center;
+    padding: 20px;
+  }
+  .center {
+    background-color: blue;
+    color: white;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
