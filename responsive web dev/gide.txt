@@ -1,0 +1,91 @@
+? Absolute units : 
+    * are the easiest to understand
+    - Pixels(px)
+    - pt , cm , mm , in , etc => not using in web if i have a print page its fine to use it 
+? Percentages :
+    * are mainly used for widths, and are pretty easy to understand
+    => relative to their parent(except on height, where things get weird).
+? Relative Units :
+    * Relative to font-size :
+        - em and rem (and many other less common ones)
+        - em and rem are considered relative, because they are relative to the font-size of other element
+        + em are relative to their parent's font-size(font-size of any parent has font-size style)
+        + font-size is an inherited property, so if you don't declare it anywhere, it's getting it from the body(or the default, which is normally 16px)
+        . the rem unit is short for Root Em that means it's always relative to the "root" of our document(the root of HTML page is always the HTML element)
+    * Relative to the viewport(browser window) : 
+        - vw , vh , vmin , vmax  
+
+
+
+
+remarke:
+
+=>block element set 100% par default
+
+=>images is inline element
+
+=>default size of image is size of image themselves
+
+=>set height or width not together if set together the image well stretch
+
+=>max-width of the container prevent the stretch of page and the container can be smaller and can't be bigger
+
+=>min-width is the opposite of the max-width
+
+=>font-size: 1em is the font-size of parent has font-size declare
+
+=>font-size: 1.5em is the 150% of value of font-size of closest parent has font-size declare
+
+=>use em if we wont every text adapt to the font size of the parent if we use media quary 
+
+=>em get weird if we use em in parent of element and use em in child
+
+=>rem resolve the problem use declare font-size to html and the rest of element adapt to it using rem 
+
+=>em look to font-size of perent if we use in any other property it's no longer looking at the parent 
+    its look to font-size of own font-size 
+
+?general rule of thumb : 
+    . font-size = rem
+    . Padding and margin = em
+    . width = em or Percentage
+    => we use this in Most of the time not all the time
+
+!responsive layout basics : 
+    - Element normally have a display:block or a display:inline as a default from the browser
+    * block element :
+        . div , header , footer , main , etc
+        . h1 -> h6
+        . p
+        - if we say they're 10% width, they're still going to stack one on top of each other 
+            + we can change tis behavior by setting the display property to flex on the parent element
+            -> url = images/displayFlex.png
+            + we can use justify-content to manipulate the verticl alignment of element and we can create space between element
+            -> url = images/flex=justify-content.png
+            + we can use align-items to manipulate the horzontal alignment of element
+            -> url = images/flex=align-items.png
+                -) default value of align-items is : url = images/flex=align-items=stretch.png
+    * inline element :
+        . a
+        . strong
+        . em
+        . span
+
+?Media quary : 
+    - Media queries let us add new style that target only specific condition
+    * basic syntax :
+        @media () { ... } 
+        -> @media media-type and (media-features) { ... }
+    * media type : 
+        - the media type let's us target different types of media 
+        -> screen . @media screen { ... }
+        -> print . @media print { ... }
+        -> speech . @media speech { ... }
+        - the media condition let's us target specific conditions within that media type
+        -> width . @media (min-width: 900px) { ... } 
+        -> orientation . @media (orientation: landscape) { ... } 
+        -> specific features . @media (hover) { ... } - in this example target divaces when the user not use a mouse
+        - both media type and conditions are optional
+        - we do need to either have a type or condition
+        - or we can choose only a condition, such as the width of the viewprot
+        - you can combine a type with a condition by using 'and'

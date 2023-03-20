@@ -1,0 +1,10 @@
+set max-width property to image 
+    => if you use max-width often you need to set width: 100% before writing max-width 
+avoiding fix size for example : width: 1000px
+    => instead use max-width or min-height
+                                |=> to height get larger when the viewport get smaller
+                    |=> to width get smaller when the viewport get smoloer
+min() is function in css for example -> width: min(90% , 1000px)
+                    |=> if the viewport get larger than 1000px the container not get larger than 1000px if the conatiner get smaller the container stil 90% of the viewport  
+max() is function in css for example -> padding: max(3vh , 1rem)
+                    |=> if the viewport het smaller the padding 3vh intel he reach 1rem stop getting smaller

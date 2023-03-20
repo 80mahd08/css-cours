@@ -1,0 +1,47 @@
+! rem and em :
+
+`rem` and `em` are both units of measurement in CSS that are used to define the size of an 
+element in relation to its parent container.
+
+`rem` stands for "root em" and refers to the font size of the root element of the document, which is typically 
+the <html> element. One `rem` is equal to the font size of the root element. This means that if the font 
+size of the root element is set to 16px, then 1rem is equal to 16px.
+
+For example, suppose you have the following CSS:
+
+html {
+    font-size: 16px;
+}
+body {
+    font-size: 1.2rem;
+}
+
+In this case, the font-size of the body element is set to 1.2rem, which is equal to 1.2 * 16px = 19.2px. 
+The 1.2 multiplier is because we set the font-size of the html element to 16px.
+
+
+`em`, on the other hand, refers to the font size of the current element. One `em` is equal to the font size 
+of the current element. This means that if the font size of the current element is set to 16px, then 1em 
+is equal to 16px.
+
+For example, suppose you have the following HTML:
+
+<p>This is a <span>text</span> example.</p>
+
+And the following CSS:
+
+p {
+    font-size: 16px;
+}
+  
+span {
+    font-size: 0.8em;
+}
+
+In this case, the font-size of the span element is set to 0.8em, which is equal to 0.8 * 16px = 12.8px. 
+The 0.8 multiplier is because we set the font-size of the p element to 16px.
+
+=>In general, rem is a better choice for setting element sizes because it is based on the root element, 
+which is not affected by the font size of its parent elements. However, em can be useful for setting 
+font sizes in a way that scales with the font size of its parent element.
+

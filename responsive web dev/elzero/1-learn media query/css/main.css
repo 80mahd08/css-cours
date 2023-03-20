@@ -1,0 +1,68 @@
+
+@media (max-width: 767px ){/* mobile & tablet rules+ */
+    p{
+        color: red;
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 768px ){/* small screen rules */
+    p{
+        color: green;
+        font-size: 50px;
+        text-decoration: underline double red;
+    }
+}
+
+@media (min-width: 768px ) and (max-width: 991px){/* small screen rules */
+    p{
+        background-color: #e74;
+        padding: 80px;
+
+    }
+}
+
+@media (min-width: 992px ) and (max-width: 1199px){/* medium screen rules */
+    p{
+        color: blue;
+        font-size: 60px;
+        text-transform:uppercase;
+    }
+}
+
+@media (min-width: 1200px ){/* large screen rules */
+    p{
+        color: pink;
+        font-size: 70px;
+    }
+}
+
+/* start page 1 */
+@media (min-width: 1200px ){
+    .classX{
+
+    }
+}
+/* start page 2 */
+@media (min-width: 1200px ){
+    .classY{
+
+    }
+}
+/* start page 3 */
+@media (min-width: 1200px ){
+    .classZ{
+
+    }
+}
+
+/* all the media query above this is like media query blow this but what above this is more organized*/
+
+@media (min-width: 1200px ){
+    .classX,
+    .classY,
+    .classZ{
+        
+    }
+}
+
